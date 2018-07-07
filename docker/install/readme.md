@@ -1,4 +1,4 @@
-[TOC]
+[toc]
 
 # Docker installation tools
 
