@@ -11,10 +11,14 @@ Tested with [Ubuntu Server 16.04.4 LTS](http://releases.ubuntu.com/16.04/).
 Clone this repository or download or copy-paste the script _install_docker_compose_extensions.sh_ to your local system.
 
 ``````sh
+# Git clone
 $ git clone https://github.com/andz-dev/dev-tools.git
+
+# Download via wget and run the script
+wget -O install_compose_extensions.sh https://github.com/andz-dev/dev-tools/blob/master/docker/install/x64/install_docker_compose_extensions.sh?raw=true | chmod +x install_docker_compose_extensions.sh | sudo sh install_docker_compose_extensions.sh
 ``````
 
-After that go to the directory where the file is and make it executable.
+If you cloned the repository folloe the next steps. Go to the directory where the file is and make it executable.
 
 ``````sh
 $ chmod +x install_docker_compose_extensions.sh
