@@ -1,5 +1,3 @@
-[toc]
-
 # Docker installation tools
 
 Installing Docker manually is annoying if you need it on more than one machine. For this I created this script that helps you to install [Docker CE](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [Docker Compose](https://docs.docker.com/compose/install/) and the optional post installation steps automatically.
@@ -19,13 +17,11 @@ wget -O install_docker_compose_extensions.sh https://github.com/andz-dev/dev-too
 ``````
 
 If you cloned the repository folloe the next steps. Go to the directory where the file is and make it executable.
-
 ``````sh
 $ chmod +x install_docker_compose_extensions.sh
 ``````
 
 Run the script with _sudo_.
-
 ``````sh
 $ sudo sh install_docker_compose_extensions.sh
 ``````
