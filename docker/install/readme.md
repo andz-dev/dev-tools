@@ -15,7 +15,7 @@ Clone this repository or download or copy-paste the script _install_docker_compo
 $ git clone https://github.com/andz-dev/dev-tools.git
 
 # Download via wget and run the script
-wget -O install_compose_extensions.sh https://github.com/andz-dev/dev-tools/blob/master/docker/install/x64/install_docker_compose_extensions.sh?raw=true | chmod +x install_docker_compose_extensions.sh | sudo sh install_docker_compose_extensions.sh
+wget -O install_docker_compose_extensions.sh https://github.com/andz-dev/dev-tools/blob/master/docker/install/x64/install_docker_compose_extensions.sh?raw=true; chmod +x install_docker_compose_extensions.sh; sudo sh install_docker_compose_extensions.sh
 ``````
 
 If you cloned the repository folloe the next steps. Go to the directory where the file is and make it executable.
