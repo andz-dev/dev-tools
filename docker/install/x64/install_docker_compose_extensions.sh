@@ -23,7 +23,8 @@ add-apt-repository \
 apt update && apt install -y docker-ce;
 
 # Docker post installation
-groupadd docker && usermod -aG docker $USER;
+groupadd docker;
+usermod -aG docker $USER;
 
 # Install Docker Compose
 curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose;
