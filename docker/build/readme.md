@@ -238,3 +238,6 @@ drwxr-xr-x    2 root     root        4.0K Jul 22 15:58 node_modules
 -rw-r--r--    1 root     root       10.7K Jul 22 15:58 settings.js
 ```
 This means that we can mount the volume content via a new container to a host directory to list files and directory or edit some content.
+
+TODO:
+- Create a summary with diagram
