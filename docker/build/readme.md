@@ -1,7 +1,7 @@
 # Build containers (for Raspberry Pi)
 Although there are many containers and projects available on [Docker Hub](https://hub.docker.com) not all of these images provides support for ARM architectures. So it is necessary to build our own containers.
 
-**Before we start the following requirements are needed:**
+**Before we start the following requirements are need:**
 
 - Raspberry Pi 3
 - [Hypriot OS](https://blog.hypriot.com/)
@@ -22,12 +22,14 @@ Building our own docker images a _Dockerfile_ on the target platform is needed. 
 1. Login to the Pi via SSH
     ```$ sh {USER}@{IP|HOSTNAME}```
 2. Create a new directory structure inside the users home and create an empty _Dockerfile_
+
     ```sh
     $ cd ~
     $ mkdir docker docker/nodered
     $ cd docker/nodered
     $ touch Dockerfile
     ```
+
 3. Open the Dockerfile with an editor of your choice (I use _nano_)
     ```$ nano Dockerfile```
 
@@ -122,6 +124,7 @@ Successfully tagged nodered-arm:0.1
 
 ### Analyze build process
 During the build process we see docker create some _intermediate_ containers. If we get some build errors docker can continue the last failed step instead of re-building the complete image. This is very helpful because we work with _Image Layers_ for a better build process handling.
+
 ![](./architecture/Docker_Image_Layers.png)
 
 If we run ```docker images``` non-tagged images are shown.
@@ -140,7 +143,7 @@ nodered-arm           0.1                 2d9d2d488828        10 seconds ago    
 alpine                3.8                 4407218c8304        2 weeks ago          4.01MB
 ```
 
-And if we run ```docker ps -a``` dummy containers are shown.
+And if we run ```docker ps -a``` also dummy containers shown.
 
 ```sh
 $ docker ps -a
@@ -161,8 +164,10 @@ $ docker run -it --rm --name test -p 1880:1880 nodered-arm:0.1
 
 Because the container starts interactively ```-it``` we see the console output of Node-RED.
 If all was set up correctly Node-RED should be available on your local network via _http://{IP|HOSTNAME}:1880_.
+
 ![nodered_docker_container](./pictures/nodered_docker_container.png)
+
 To stop the container press ```CTRL + C``` inside your terminal. The container is stopping and removing because of the ```--rm``` parameter.
 
 ## Manage container data
-If you want to know more about how to work with container data follow [my tutorial for the Raspberry Pi]()).
+If you want to know more about how to work with container data follow [my tutorial for the Raspberry Pi](https://github.com/andz-dev/projects/tree/master/raspberry_pi/docker/volumes).

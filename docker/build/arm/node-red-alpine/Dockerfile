@@ -1,7 +1,7 @@
-# Use the Node.js Alpine container image
+# Use the Alpine base container image
 FROM alpine:3.8
 
-LABEL Maintainer "Andreas Elser"
+LABEL Name "Andreas Elser"
 LABEL Version "0.1"
 
 # Install some necessary tools because some nodes needs to be rebuild
