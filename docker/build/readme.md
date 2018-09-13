@@ -125,7 +125,7 @@ Successfully tagged nodered-arm:0.1
 ### Analyze build process
 During the build process we see docker create some _intermediate_ containers. If we get some build errors docker can continue the last failed step instead of re-building the complete image. This is very helpful because we work with _Image Layers_ for a better build process handling.
 
-![](./architecture/Docker_Image_Layers.png)
+![docker_image_layers](./architecture/docker_image_layers.png)
 
 If we run ```docker images``` non-tagged images are shown.
 
